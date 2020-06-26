@@ -1,0 +1,18 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.banner {
+  height: 50px;
+  width: 50px;
+  background-color: #000000;
+}
+
+.card {
+  background-color: #6ab04c;
+  border-radius: 10px;
+  border-color: blue;
+  border-width: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}

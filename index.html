@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assignment 2</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="app.js"></script>
+  </head>
+  <body onload="retrieve()" onclick="changeColour()">
+    <div class="card">
+      <h3>Total of 2 Integers:</h3>
+      <label for="num1">Number 1: </label>
+      <input
+        type="text"
+        id="num1"
+        placeholder="Number 1"
+        onkeypress="numval1()"
+        required
+      />
+      <label for="num2">Number 2: </label>
+      <input
+        type="text"
+        id="num2"
+        placeholder="Number 2"
+        onkeypress="numval2()"
+        required
+      />
+      <input type="button" onclick="total();" value="Total" />
+      <input type="text" id="tot" readonly />
+      <input type="button" onclick="clear()" value="Clear" />
+    </div>
+
+    <div class="card">
+      <h3>BMI Calculator:</h3>
+      <label for="weight">Weight(KG): </label>
+      <input type="text" id="weight" placeholder="Weight(KG)" />
+      <label for="height">Height(cm): </label>
+      <input type="text" id="height" placeholder="Height(cm)" />
+      <input type="button" onclick="bmi()" value="BMI Calculate" />
+      <input type="text" id="bmi" />
+      <input type="button" onclick="clearBmi()" value="Clear" />
+      <p>Formula : Weight(kg)/Height(m)<sup>2</sup></p>
+    </div>
+
+    <div class="card">
+      <h3>Temperature Converter:</h3>
+      <label id="temp1Lable for="temp1">Celcius: </label>
+      <input type="text" id="temp1" placeholder="0.00" />
+      <label id="temp1Lable" for="temp2">Fahrenheit: </label>
+      <input type="text" id="temp2" />
+      <input
+        type="button"
+        value="Convert"
+        id="converterTemp"
+        onclick="c2f()"
+      />
+      <input type="button" onclick="switch_t()" value="Switch" />
+    </div>
+
+    <div class="card">
+      <h3>Save to Browser</h3>
+      <input
+        type="text"
+        id="browsersave"
+        placeholder="Your name"
+        onkeyup="browserstore()"
+      />
+    </div>
+
+    <div style="display: flex;" class="card">
+      <div style="width: 50%;">
+        <h3>Password Generator</h3>
+        <input type="text" id="passwordval" onkeyup="passval()" />
+      </div>
+      <div style="width: 50%;">
+        <ul>
+          <li
+            id="doneval"
+            style="background-color: green;border-radius: 6px;width: 200px;color: aliceblue;text-align: center;"
+          >
+            Your Password is Valid
+          </li>
+          <li id="passlength">Number of characters should be at least 15</li>
+          <li id="passspecial">
+            Should contain at least 3 different special characters
+          </li>
+          <li id="passupper">
+            Should contain at least 4 uppercase alphabetical characters
+          </li>
+          <li id="passlower">
+            Should contain at least 4 lowercase alphabetical characters
+          </li>
+          <li id="passnum">Should contain at least 2 numbers</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Colour Change</h3>
+      <label>Click anywhere on the page to change colour</label>
+      <div class="banner" id="banner" style="width: 100%;"></div>
+    </div>
+
+    <div class="card">
+      <h3>Weather Details</h3>
+      <label>Current Temperature in Colombo: </label>
+      <label id="tempvalcol"></label>°C
+    </div>
+
+    <div class="card">
+      <h3>Save Text</h3>
+      <label>Enter your Text:</label>
+      <textarea id="textVal" cols="60" rows="20"></textarea>
+      <br />
+      <br />
+      <label>File name:</label>
+      <input type="text" id="saveName" />
+      <input type="button" onclick="downloadSave()" value="Save File" />
+    </div>
+  </body>
+</html>
